@@ -55,6 +55,12 @@ class MeetupManagerTest(TestCase):
             upcoming_meetup = models.Meetup.objects.get_upcoming(date=datetime(2000, 1, 15))
 
 
+class TestMeetupListAndURLs(testcases.ViewTestCase):
+
+    def test_meetups_on_homepage(self):
+        assert False
+
+
 class MeetupDateRedirectViewTest(testcases.ViewTestCase, assertions.StatusCodeAssertionsMixin):
     view_class = views.MeetupDateRedirectView
 
